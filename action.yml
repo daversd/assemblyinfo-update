@@ -1,5 +1,5 @@
 name: 'Set AssemblyInfo Version'
-author: 'Second Bounce'
+author: 'Second Bounce, Daversd'
 description: 'Sets the assembly version number in the specified assembly info file(s)'
 branding:
   icon: 'tag'
@@ -27,7 +27,6 @@ runs:
         DIRECTORY:  ${{ inputs.directory }}
         FILENAME: ${{ inputs.filename }}
         RECURSIVE:  ${{ inputs.recursive }}
-        RUN_NUMBER: ${{ github.run_number }}
       run: ${{ github.action_path }}\SetVersion.ps1
 outputs:
   version:
