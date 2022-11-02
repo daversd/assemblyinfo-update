@@ -2,7 +2,6 @@ $version = $Env:VERSION
 $directory = $Env:DIRECTORY
 $fileName = $Env:FILENAME
 $recursive = [System.Convert]::ToBoolean($Env:RECURSIVE)
-$runNumber = $Env:RUN_NUMBER
 
 function SetVersion($file)
 {
@@ -27,7 +26,7 @@ function SetVersion($file)
 $isSemVer = [Regex]::Match($version, '^\d+\.\d+(\.\d+)?')
 if ($isSemVer.success)
 {
-	$version = $isSemVer.Value + '.' + $runNumber
+	$version = $isSemVer.Value
 }
 else
 {
