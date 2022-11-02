@@ -16,13 +16,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Test setting version using default parameters
-        uses: daversd/assemblyinfo-update/set-version@v1
+        uses: daversd/assemblyinfo-update/set-version@v1.0.0
         with:
           version: '8.8'
 
       - name: Test setting version with custom parameters
         id: test-setversion
-        uses: daversd/assemblyinfo-update/set-version@v1
+        uses: daversd/assemblyinfo-update/set-version@v1.0.0
         with:
           version: '9.9.9-alpha'
           directory: './test/'
